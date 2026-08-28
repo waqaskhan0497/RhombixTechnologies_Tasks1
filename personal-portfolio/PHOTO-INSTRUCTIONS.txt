@@ -1,0 +1,12 @@
+PROFILE PHOTO
+
+1. Choose a clear, professional photo of yourself.
+2. Rename the image to: profile.jpg
+3. Put it directly inside this folder:
+   personal-portfolio/public/profile.jpg
+4. Run:
+   npm install
+   npm run dev
+
+The portfolio is already coded to display the image in the Home section.
+If profile.jpg is missing, the site shows MW as a fallback instead of breaking the page.

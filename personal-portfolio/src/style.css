@@ -1,0 +1,398 @@
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    font-family: Inter, Arial, sans-serif;
+    color: #eaf0ff;
+    background: #0b1220;
+    line-height: 1.6
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background: rgba(11, 18, 32, .92);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    z-index: 10;
+    border-bottom: 1px solid #22304a
+}
+
+.nav {
+    max-width: 1100px;
+    margin: auto;
+    padding: 15px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: #65d6ff;
+    text-decoration: none
+}
+
+nav {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: flex-end
+}
+
+nav a {
+    color: #c8d4e8;
+    text-decoration: none
+}
+
+nav a:hover {
+    color: #65d6ff
+}
+
+.menu {
+    display: none;
+    background: none;
+    border: 0;
+    color: white;
+    font-size: 26px
+}
+
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 90px 24px
+}
+
+.hero {
+    min-height: 88vh;
+    display: grid;
+    grid-template-columns: 1.3fr .7fr;
+    align-items: center;
+    gap: 50px
+}
+
+.eyebrow,
+.section-label {
+    color: #65d6ff;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    animation: slideInLeft 0.6s ease-out, colorGlow 2s ease-in-out infinite
+}
+
+.eyebrow {
+    animation-delay: 0s, 0.6s
+}
+
+.section-label {
+    animation-delay: 0s, 0.6s
+}
+
+.hero h1 {
+    font-size: clamp(50px, 8vw, 92px);
+    line-height: 1;
+    margin: 0;
+    animation: slideInLeft 0.7s ease-out 0.15s both
+}
+
+.hero h2 {
+    font-size: 25p;
+    animation: slideInLeft 0.7s ease-out 0.3s bothx;
+    color: #9bb0ce
+}
+
+.intro {
+    max-width: 650px;
+    color: #b8c5d9;;
+    animation: fadeInUp 0.7s ease-out 0.45s both;
+    font-size: 18px
+}
+
+.btn {
+    display: inline-block;
+    background: #65d6ff;
+    color: #07111e;
+    padding: 13px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 800;
+    animation: fadeInUp 0.7s ease-out 0.6s both;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(101, 214, 255, 0.4);;
+    margin-top: 12px
+}
+
+.profile-wrap {
+    width: 280px;
+    height: 280px;
+    margin: auto
+}
+
+.profile-photo,
+.profile {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover
+}
+
+.profile-photo {
+    display: block;
+    border: 3px solid #65d6ff;
+    box-shadow: 0 0 70px #123f5a;
+    animation: fadeInScale 0.8s ease-out, float 3s ease-in-out infinite;
+    animation-delay: 0.2s, 0.8s
+}
+
+.fallback-profile {
+    display: grid;
+    place-items: center;
+    font-size: 80px;
+    font-weight: 900;
+    color: #65d6ff;
+    border: 3px solid #65d6ff;
+    box-shadow: 0 0 70px #123f5a
+}
+
+.alt {
+    max-width: none;
+    background: #101a2d
+}
+
+.alt>* {
+    animation: slideInUp 0.6s ease-out;
+    max-width: 1052px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+section h2 {
+    font-size: 38px;
+    margin-top: 0
+}
+
+.info-grid,
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px
+}
+
+.info-grid article,
+.card,
+.cert-card {
+    background: #142139;
+    border: 1px solid #263957;
+    border-radius: 14px;
+    padding: 24px
+}
+
+.info-grid h3,
+.card h3,
+.cert-card h3 {
+    margin-top: 0
+}
+
+.muted {
+    color: #65d6ff;
+    font-weight: 700
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px
+}
+
+.skills span {
+    padding: 12px 18px;
+    background: #142139;
+    border: 1px solid #2b4567;
+    border-radius: 999px
+}
+
+.cert-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px
+}
+
+.cert-card {
+    display: flex;
+    align-items: center;
+    gap: 14px
+}
+
+.card-icon {
+    font-size: 32px;
+    color: #65d6ff
+}
+
+.card a {
+    color: #65d6ff;
+    text-decoration: none
+}
+
+.achievements {
+    max-width: 1100px
+}
+
+.contact {
+    text-align: center
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 20px
+}
+
+.links a {
+    color: #65d6ff
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #8ca0bd;
+    border-top: 1px solid #22304a
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9)
+    }
+    to {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px)
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px)
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px)
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes colorGlow {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(101, 214, 255, 0.3)
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(101, 214, 255, 0.6)
+    }
+}
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px)
+    }
+    50% {
+        transform: translateY(-15px)
+    }
+}
+
+@media(max-width:850px) {
+    nav {
+        gap: 12px
+    }
+
+    nav a {
+        font-size: 14px
+    }
+}
+
+@media(max-width:700px) {
+    nav {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0;
+        background: #101a2d;
+        padding: 20px;
+        flex-direction: column
+    }
+
+    .menu {
+        display: block
+    }
+
+    nav.show {
+        display: flex
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center
+    }
+
+    .profile-wrap,
+    .profile-photo,
+    .profile {
+        width: 210px;
+        height: 210px
+    }
+
+    .fallback-profile {
+        font-size: 60px
+    }
+
+    .intro {
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .info-grid,
+    .cards,
+    .cert-list {
+        grid-template-columns: 1fr
+    }
+
+    section {
+        padding: 65px 20px
+    }
+
+    section h2 {
+        font-size: 30px
+    }
+}
